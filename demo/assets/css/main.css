@@ -1,0 +1,1374 @@
+@import url('../lib/css/reset.css');
+@import url('../lib/css/animate.css');
+@import url('../lib/css/font-awesome.min.css');
+@import url('standard.css');
+
+@font-face {
+font-family: 'HelveticaTextbookLT-Roman';
+src: url('../font/helvetica/TextbookLT-Roman.eot?#iefix') format('embedded-opentype'),  url('../font/helvetica/HelveticaTextbookLT-Roman.woff') format('woff'), url('../font/helvetica/HelveticaTextbookLT-Roman.ttf')  format('truetype'), url('../font/helvetica/HelveticaTextbookLT-Roman.svg#HelveticaTextbookLT-Roman') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+/* Base styles for body and .wrapper */
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "HelveticaTextbookLT-Roman";
+    background: url(../../assets/img/bg.gif) no-repeat;
+    
+     /* Prevent horizontal scrolling */
+    background-size: cover;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 30px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1a020e;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+.img2{
+    width: 20%;
+    float: right;
+}
+.img{
+    width: 40%;
+    position: absolute;
+    margin-top: 141px;
+    margin-left: -80px;
+}
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.container .card .icon {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #2c73df;
+
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 22px;
+  margin: 20px;
+}
+
+.activity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.activity span {
+  flex: 1;
+}
+
+.activity .option-box {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #87ceeb;
+  border-radius: 4px;
+  background-color: #e6f7ff;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.girl{
+    width: 23%;
+    margin-left: 113px;
+    margin-top: -7px;
+}
+
+.container .card .icon .fa {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 80px;
+
+    color: #fff;
+
+}
+
+.container .card .slide {
+
+width: 320px;
+
+height: 200px;
+
+transition: 0.5s;
+}
+
+.container .card .slide.slide1 {
+
+position: relative;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+z-index: 1;
+
+transition: .7s;
+
+transform: translateY(100px);
+}
+
+.container .card:hover .slide.slide1{
+
+    transform: translateY(0px);
+
+}
+
+.container .card .slide.slide2 {
+
+position: relative;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+top: -278px;
+
+left: -113px;
+
+background: url(../../assets/img/btn.png) no-repeat;
+
+background-size: 100% 100%;
+
+padding: 20px;
+
+box-sizing: border-box;
+
+transition: .8s;
+
+transform: translateY(-100px);
+}
+
+.container .card:hover .slide.slide2{
+
+    transform: translateY(0);
+
+}
+
+.container .card .slide.slide2::after{
+
+content: "";
+
+position: absolute;
+
+width: 30px;
+
+height: 4px;
+
+bottom: 29px;
+
+left: 50%;
+
+left: 50%;
+
+transform: translateX(-50%);
+
+background: #ffffff;
+}
+
+.container .card .slide.slide2 .content p {
+
+    margin: 0;
+
+    padding: 0;
+
+    text-align: center;
+
+    color: #414141;
+
+}
+
+.container .card .slide.slide2 .content h3 {
+
+    margin: 0 0 10px 0;
+
+    padding: 0;
+
+    font-size: 24px;
+
+    text-align: center;
+
+    color: #414141;
+
+} 
+.submit {
+    border: 1px #fff solid;
+    background: #98c12a;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    min-width: 110px;
+	color:#fff;
+}
+.submit:hover {	color: #000;	}
+.question-section ol, .question-section ul {
+    list-style: decimal;
+    list-style-position: outside;
+    margin: 0;
+    padding-left: 6px;
+    padding-top: 0px;
+    background: url(../../assets/img/back.gif) no-repeat;
+    margin-top: -40px;
+    height: 377px;
+    background-size: 100% 100%;
+    overflow: hidden;
+    width: 99%;
+    flex-direction: column;
+    /* align-items: stretch; */
+    /* align-content: center; */
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.question-section ul {    list-style: none;	}
+.sub-header {
+    width: 50%;
+    padding: 20px 0;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px auto;
+    background: #96e0a3;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -ms-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -o-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+}
+
+
+.wrapper {
+    
+    
+    
+     /* Set a fixed width for the wrapper */
+     /* Set a fixed height for the wrapper */
+     /* Center the wrapper horizontally */
+    
+backdrop-filter: blur(4px);
+    
+/* height: 100vh; */
+}
+.btn-primary {
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    /* -webkit-tap-highlight-color: transparent; */
+    z-index: 0;
+    /* background-color: #11578d; */
+    color: #fff;
+    line-height: 20px;
+    padding: 10px 20px;
+    margin: 5px 10px;
+    /* font-family: 'Salsa', cursive; */
+    letter-spacing: 0.5px;
+    /* box-shadow: 0px 0px 5px 0px rgb(244, 67, 54); */
+}
+
+/* Base styles for .btn */
+.btn {
+    -webkit-user-select: none;
+    -webkit-transition: background .2s .1s;
+    transition: background .2s .1s;
+    border: 0px #ffffff solid;
+    -webkit-border-radius: 3px;
+    border-radius: 7px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    /* -webkit-tap-highlight-color: #d0d0d0; */
+    z-index: 0;
+    /* background-color: #6d3859; */
+    color: #fff;
+    line-height: 21px;
+    height: 76px;
+    width: 180px;
+    padding: 10px 20px;
+    margin: 3px 8px;
+    letter-spacing: 1.5px;
+    /* box-shadow: 0px 1px 7px 1px #0000006e; */
+}
+
+/* New hover effect */
+.btn:hover {
+    /* background: #000000; */ /* New background color on hover */
+    color: #000000; /* Text color on hover */
+    box-shadow: 0px 1px 10px 1px #9603038f; /* New box shadow on hover */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for screens up to 768px width */
+    .btn {
+        font-size: 18px; /* Adjust the font size for smaller screens */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+        margin: 4px 0px; /* Adjust margin for smaller screens */
+        border-radius: 8px; /* Adjust border-radius for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Further adjust styles for screens up to 576px width */
+    .btn {
+        font-size: 11px; /* Further adjust the font size for even smaller screens */
+        padding: 4px 7px; /* Further adjust padding for even smaller screens */
+        margin: 1px 0px; /* Further adjust margin for even smaller screens */
+        border-radius: 6px; /* Further adjust border-radius for even smaller screens */
+    }
+}
+
+.btn[disabled] {
+	opacity: 0.5;
+	border: 0px solid;
+	outline: 0;
+}
+
+.container {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* You can remove the margin-top and position properties */
+}
+
+
+@media screen and (max-width: 576px) {
+    /* Adjust styles for screens up to 576px width */
+    body {
+        font-size: 12px; /* Further adjust the base font size */
+    }
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for screens up to 768px width */
+    #button_play_intro {
+         /* Adjust the button width for smaller screens */
+         /* Set a maximum width for the button */
+         /* Further adjust margin-top for smaller screens */
+         /* Adjust margin-left for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Further adjust styles for screens up to 576px width */
+    #button_play_intro {
+        width: 12%; /* Further adjust the button width for even smaller screens */
+        max-width: 47px; /* Set a maximum width for the button */
+        margin-top: 2.5%; /* Further adjust margin-top for even smaller screens */
+        height: 30px;
+        margin-left: -12%; /* Further adjust margin-left for even smaller screens */
+    }
+}
+
+
+.starterScreen header {
+    min-height: 40px;
+}
+header {
+    width: 85%;
+    position: relative;
+    padding: 12px;
+    height: 127px;
+    display: flex;
+    margin: auto;
+    \: -2px -1px 6px 1px #00000080;
+    text-align: center;
+    background: url(../../assets/img/head_4.png);
+    \: \;
+    align-items: center;
+    flex-direction: column;
+    background-size: 100% 100%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for screens up to 768px width */
+    header {
+        width: 88%; /* Adjust the width for smaller screens */
+         /* Adjust the height for smaller screens */
+         /* Adjust the top position for smaller screens */
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Further adjust styles for screens up to 576px width */
+    header {
+        width: 93%; /* Further adjust the width for even smaller screens */
+        height: 47px; /* Further adjust the height for even smaller screens */
+         /* Further adjust the top position for even smaller screens */
+        margin: auto;
+    }
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -50px;
+	    z-index: 11;
+}
+
+.starterScreen {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    background: #FFFFFF;
+}
+
+.activity_title {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 50px auto 50px;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    color: #666666;
+}
+.instructions {
+    width: 75%;
+    margin: 20px auto;
+    text-align: left;
+    background: #03c3eb;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.instructions ol {
+    list-style-type: lower-roman;
+    padding-left: 20px;
+}
+
+.instructions ol li {
+    line-height: normal;
+    padding-bottom: 7px;
+    font-size: 15px;
+    color: #fff;
+}
+ 
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: #FFF;
+    clear: both;
+}
+
+.title-h2 {
+   	font-size: 1.5em;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    top: 25%;
+    position: relative;
+}
+
+.title-h3 {
+    font-size: 28px;
+    color: #fff;
+    line-height: 50px;
+    font-family: auto;
+    font-weight: 700;
+    text-shadow: 2px 1px 3px #000000c7;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    /* Adjust font size for screens up to 768px width */
+    .title-h3 {
+        font-size: 3vw; /* Adjust the font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Further adjust font size for screens up to 576px width */
+    .title-h3 {
+        font-size: 3vw; /* Further adjust the font size for smaller screens */
+        padding: 1px 34px;
+    }
+}
+
+
+
+
+
+
+
+.title-h4 {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: normal;
+}
+
+b {
+    font-weight: bold;
+}
+
+/* Default styling */
+.content {
+    margin: 0 auto;
+    z-index: 9;
+    position: relative;
+    transition: all 0.2s ease-in;
+    text-align: center;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    /* Adjust properties for smaller screens */
+    .content {
+        width: 100%; /* Set a fixed width for smaller screens */
+         /* Adjust the minimum height as needed */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Adjust properties for medium-sized screens */
+    .content {
+        width: 70%; /* Set a different fixed width for medium-sized screens */
+        min-height: 60%; /* Adjust the minimum height as needed */
+    }
+}
+
+/* You can add more media queries for different screen sizes as needed */
+
+.button-wrapper {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+}
+
+
+.body-container {
+    margin: auto;
+    height: 100%;
+}
+
+#screen-activity, .section-hdivider, .stage
+{
+	height: auto;
+	width: auto;
+	margin: auto;
+}
+
+.submit {
+    border: 1px #fff solid;
+    background: #98c12a;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    min-width: 110px;
+	color:#fff;
+}
+.submit:hover {	color: #000;	}
+.question-section ol, .question-section ul {
+    list-style-position: outside;
+    overflow: auto;
+}
+.question-section ul {    list-style: none;	}
+.sub-header {
+    width: 50%;
+    padding: 20px 0;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px auto;
+    background: #96e0a3;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -ms-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -o-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+}
+
+/* Base styles for the question section */
+.question-section {
+    margin: auto;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.question-section ol li, .question-section ul li {
+    margin: 9px;
+    width: 94%;
+    text-align: start;
+    font-size: 22px;
+    /* border: 2px #00b1ff63 solid; */
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    position: unset;
+    transition: all 0.2s ease-in;
+    color: #ffffff;
+    top: 10;
+    font-weight: 300;
+    /* box-shadow: 0px 0px 2px 2px #a8818129; */
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 8px 10px;
+    background: #00000099;
+    display: block;
+}
+
+/* Add a media query for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+    .question-section ol li,
+    .question-section ul li {
+         /* Make the items stack vertically on smaller screens */
+         position: relative;
+         margin: 0; /* Reset margin to center items */
+         font-size: 18px;
+         text-align: center;
+         
+         
+         /* Adjust padding for better spacing */
+    }
+}
+
+
+
+.btn-primary {
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    /* -webkit-tap-highlight-color: transparent; */
+    z-index: 0;
+    /* background-color: #11578d; */
+    color: #000000;
+    line-height: 20px;
+    padding: 10px 20px;
+    margin: 5px 10px;
+    /* font-family: 'Salsa', cursive; */
+    letter-spacing: 0.5px;
+    /* box-shadow: 0px 0px 5px 0px rgb(244, 67, 54); */
+}
+
+/* Base styles for .btn */
+.btn {
+    /* -webkit-user-select: none; */
+    -webkit-transition: background .2s .1s;
+    transition: background .2s .1s;
+    /* border: 0px #ffffff solid; */
+    -webkit-border-radius: 3px;
+    border-radius: 7px;
+    cursor: pointer;
+    background: bottom;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    /* -webkit-tap-highlight-color: #d0d0d0; */
+    z-index: 0;
+    /* background: #448e13; */
+    color: #000000;
+    background-size: 100% 100%;
+    line-height: 21px;
+    height: 94px;
+    padding: 10px 20px;
+    margin: 6px 0px;
+    letter-spacing: 1.5px;
+    /* box-shadow: 0px 1px 7px 1px #0000006e; */
+}
+
+/* New hover effect */
+.btn:hover {
+    /* background: #00a0f0; */ /* New background color on hover */
+    color: #000000; /* Text color on hover */
+    box-shadow: 0px 1px 10px 1px #9603038f; /* New box shadow on hover */
+}
+
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for screens up to 768px width */
+    .btn {
+        font-size: 18px; /* Adjust the font size for smaller screens */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+        margin: 4px 0px; /* Adjust margin for smaller screens */
+        border-radius: 8px; /* Adjust border-radius for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Further adjust styles for screens up to 576px width */
+    .btn {
+        font-size: 11px; /* Further adjust the font size for even smaller screens */
+        padding: 4px 7px; /* Further adjust padding for even smaller screens */
+        margin: 1px 0px; /* Further adjust margin for even smaller screens */
+        border-radius: 6px; /* Further adjust border-radius for even smaller screens */
+    }
+}
+
+.btn[disabled] {
+	opacity: 0.7;
+	border:0px solid;
+	outline: 0;
+}
+
+.question-section input[type="text"] {
+    background: #fdfce2;
+    border: none;
+    font-size: 20px;
+    height: 25px;
+    text-align: center;
+    float: right;
+    width: 47px;
+    padding: 4px;
+    border: 1px solid black;
+    background: #FFF;
+}
+
+.img-submit {
+   font-size: 30px;
+    position: absolute;
+    left: 20px;
+    display: none;
+    top: 18px;
+}
+.img-incorrect {
+    color: #e02206;
+}
+
+.img-correct {
+    color: green;
+}
+.attempt-correct .img-submit.img-correct{
+    display: block;
+}
+
+.attempt-incorrect .img-submit.img-incorrect {
+    display: block
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.37);
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    display: none;
+}
+
+.modal-container {
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    background: #FFF;
+    text-align: center;
+    background: white;
+    left: 50%;
+    top: 20%;
+    margin-left: -200px;
+    padding: 20px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+    -moz-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+}
+
+.modal-content {
+    min-height: 120px;
+}
+.question-section .attempt-correct input[type="text"][readonly] {
+    background: #dafff1;
+}
+
+.question-section .static-ans input[type="text"][readonly] {
+    background: #4285f4;
+    color: white;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+    border-color: white;
+    cursor: default;
+}
+
+.feedback-text {
+        font-size: 22px;
+    text-align: center;
+    margin: 0px auto;
+    padding-bottom: 10px;
+    color: #fff;
+}
+.feedback-text img {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+.input-uppercase input[type="text"] {
+	text-transform: uppercase;
+}
+
+.input-lowercase input[type="text"] {
+	text-transform: lowercase;
+}
+
+.section-left {
+    border-right: 2px solid #c6479a;
+    box-sizing: border-box;
+}
+
+.question-section.blocker:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.question-section ul.draggable_list li {
+    list-style: none;
+    background: #03c3eb;
+    padding: 10px;
+    margin: 4px 0px;
+    cursor: pointer;
+    font-size: 17px;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    transition: none;
+}
+
+.question-section .draggable_list {
+    width: 210px;
+    text-align: center;
+    margin: 0px;
+    float: right;
+    /* background: #FFF; */
+    padding-left: 7px;
+    position: relative;
+    z-index: 9;
+    max-width: 100%;
+    width: 47%;
+}
+
+.question-section ul.draggable_list li:first-child {
+    margin-top: 0px;
+}
+
+.question-section ul.draggable_list li:last-child {
+    margin-bottom: 0px;
+}
+
+.section-hdivider {
+    /* background: #fdfce3; */
+}
+
+.main-section {
+    height: 540px;   /* to be udpated with js also */
+    width: calc(100% - 220px);
+    width: 50%;
+    /* background: #fdfce2; */
+    position: relative;
+    float: left;
+}
+
+.drop-box-area {
+    width: 79%;
+    width: 100%;
+    
+    box-sizing: border-box;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    line-height: normal;
+    text-transform: none;
+    text-align: center;
+    color: #000;
+    font-weight: normal;
+    font-size: 20px;
+    margin: 10px 0;
+    background: #fff url('../img/bg_lines.png');
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -ms-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -o-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    padding: 0px;
+    text-align: center;
+    margin: 0;
+    padding: 12px 0px;
+    background: #FFF;
+}
+
+.droppedItem {
+    background: #03c3eb;
+    margin: 10px 10px;
+    padding: 7px 10px;
+    text-align: center;
+    line-height: 20px;
+    border: 1px solid #2980b9;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    /* width: 50%; */
+    display: block;
+    margin: 0px auto 8px auto;
+    height: 37px;
+    width: 95%;
+}
+.static-box {
+    background: lightgrey;
+    margin: 10px 10px;
+    padding: 7px 10px;
+    text-align: center;
+    line-height: 20px;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    /* width: 50%; */
+    display: block;
+    margin: 0px auto 8px auto;
+    height: 37px;
+    width: 95%;
+}
+
+.dragHideTrick {
+    visibility: hidden !important;
+}
+
+.dropActiveHighlight {
+    background: #fff url('../img/bg_lines.png');
+}
+
+
+.activityImg {
+    background: #fff;
+    text-align: left;
+    width: 250px;
+    margin: auto;
+    max-width: 100%;
+}
+
+
+
+.activityImg img {
+    max-width: 100%;
+}
+figure img {
+    max-width: 90%;
+}
+
+figure {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px auto;
+    color: #000;
+    -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -ms-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    -o-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.32);
+}
+
+figcaption {
+    padding: 10px 0;
+    text-align: center;
+}
+
+h4#ans-title {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: normal;
+    color: #fff;
+    margin: 10px auto;
+}
+.feedback_img {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+	z-index: 100;
+}
+
+.feedback_img img {
+    max-width: 170px;
+}
+
+.activity-completion {
+	display:none;
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	background-position: center center;
+	}
+.complete_img img {
+    max-width: 50%;
+    text-align: center;
+}
+
+.complete_img {
+    width: 100%;
+    margin: 0 0 0 8%;
+}
+
+.complete_msg {
+    margin: 20px auto;
+    text-align: center;
+    display: inline-block;
+}
+
+.complete_msg h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    line-height: normal;
+    background: #1a9830;
+    padding: 20px 20px;
+    border-radius: 10px;
+    border: 2px #fff solid;
+    display: inline-block;
+}
+
+body.completed .main-section {
+    margin: auto;
+    float: none;
+}
+
+body.completed #draggable_list {
+    display: none;
+}
+
+ 
+
+
+.drop-box-area-single {
+    background: #df5a46;
+    width: 95%;
+    height: 50px;
+    margin: 0px auto 9px auto;
+}
+
+.border-box
+{
+	height: auto;
+	width: auto;
+}
+#container-box {
+    position: relative;
+    border-radius: 15px;
+    /* box-shadow: #0000006b -6px 12px 6px 1px; */
+    /* border: 3px ridge #086289; */
+     /* Center the container horizontally */
+     /* Add some padding for better spacing */
+    background-size: 100% 100%;
+    margin: -4px auto;
+    width: 86%; /* Set width to 100% for responsiveness */
+     /* Set a maximum width */
+     /* Allow height to adjust based on content */
+    padding: 6px;
+    height: 382px;
+    overflow: auto;
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 870px) {
+    #container-box {
+         /* Adjust the width for smaller screens */
+         height: auto;
+          /* Remove the maximum width */
+         width: auto;
+         margin: auto;
+         top: 8px;
+    }
+}
+
+
+#s1{top: 10px;left: 121px;}
+#s2{top: 70px;left: 121px;}
+#s3{top: 132px;left: 145px;}
+#s4{top: 192px;left: 121px;}
+#s5{top: 255px;left: 142px;}
+#s6{top: 281px;left: 305px;}
+#s7{top: 120px;left: 593px;}
+#s8{top: 200px;left: 593px;}
+#s9{top: 283px;left: 593px;}
+
+/* Common styles for #container-items-box, .item, and .drop */
+#container-items-box {
+    margin: 8px auto;
+    border-radius: 11px;
+    width: 85%;
+    display: block;
+    margin-top: -82px;
+    padding: 8px;
+    background: url(../../assets/img/contain.png);
+    background-size: 100% 100%;
+    height: 144px;
+}
+
+.item {
+    display: inline-flex;
+    padding: 19px 0px;
+    background: url(../../assets/img/box.png);
+    color: rgb(0 0 0);
+    background-size: 100% 100%;
+    height: 52px;
+    font-weight: normal;
+    z-index: 99;
+    font-family: 'HelveticaTextbookLT-Roman';
+    font-size: 17px;
+    cursor: pointer;
+    min-width: 105px;
+    margin: 47px 3px 5px 5px;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.div_parent {
+     /* Allow it to resize based on the container width */
+      /* Center it horizontally */
+     
+      /* Center the content horizontally */
+     /* backdrop-filter: brightness(0.5); */
+}
+
+.div_parent img {
+    max-width: 99%; /* Make the images responsive within their parent */
+    height: auto; /* Allow the height to adjust proportionally */
+     /* Set a maximum height to limit resizing */
+}
+
+
+
+
+.drop {
+    width: 216px; /* Use 100% width for .drop */
+    border-bottom: 3px solid rgb(64 5 34);
+    font-size: 25px;
+    display: flex;
+    position: relative;
+    color: black;
+    margin: 5px;
+    font-weight: normal;
+    height: 30px;
+    /* background: rgb(169 211 234 / 16%); */
+    text-align: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 576px) {
+    #container-items-box {
+        width: 91%; /* Further adjust the width for even smaller screens */
+        font-size: 15px; /* Further adjust font size for smaller screens if needed */
+    }
+
+    .item {
+        font-size: 10px; /* Further adjust font size for smaller screens */
+        padding: 0px 2px;
+        min-width: 35px;
+    }
+
+    .drop {
+        font-size: 12px; /* Further adjust font size for smaller screens if needed */
+        height: 15px;
+        border-radius: 2px;
+        color: green;
+        width: 100px;
+    }
+}
+
+
+.ans-correct{
+    border-color: green !important;
+    color: green;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 13%;
+    display: block;
+    left: 90%;
+}
+
+.ans-correct:after {
+	content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../img/tick.png) no-repeat;
+    position: absolute;
+    color: green;
+    font-weight: bold;
+	background-size: cover;
+}
+
+.ans-incorrect{
+    border-color: red !important;
+    color: red;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 13%;
+    display: block;
+    left: 90%;
+}
+
+.ans-incorrect:after {
+      content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../img/cross.png) no-repeat;
+    position: absolute;
+    color: red;
+    font-weight: bold;
+	background-size: cover;
+}
+
+.getAnswer {
+	color: rgb(255, 163, 0);
+	background: rgba(255, 163, 0, 0.2);
+	border-color: rgb(255, 163, 0);
+}
+
+span.space {
+    width: 100px;
+    padding: 0 0px;
+    display: inline-block;
+}
+
+.words
+{
+    margin-left: 5px;
+    display: inline-block;
+    height: 30px;
+}
+
+#info_img
+{
+	width:150px;	
+}
+
+#cont_border
+{
+	border:1px solid black;
+	width:83%;
+	height:96%; 	
+	position:absolute;
+	top:2.5%;
+	left:8.5%;
+	border-radius:15px;
+}
+#button_play_intro {
+    width: 49px;
+    margin-left: 12px;
+    height: 50px;
+    background: url(../../../page_10/assets/img/soundon_icon.png);
+    background-size: 100% 100%;
+    cursor: pointer;
+    z-index: 999999;
+    position: absolute;
+    margin-right: -923px;
+}
+/* Add a media query for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+    #button_play_intro {
+         /* Adjust the width for smaller screens */
+         width: 40px; /* Adjust the maximum width */
+         height: 28px; /* Adjust the height */
+         /* Adjust the margin-top for responsiveness */
+         /* Adjust the margin-left for smaller screens */
+    }
+}
+
